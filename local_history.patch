@@ -1,0 +1,35 @@
+Index: src/sass/main.sass
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/sass/main.sass	(date 1538677497305)
++++ src/sass/main.sass	(date 1538677497305)
+@@ -15,8 +15,6 @@
+   color:  #555555
+   font-size: 30px
+   font-weight: 600
+-.slide
+-  position: absolute
+ .header
+   position: relative
+ .head
+@@ -39,7 +37,7 @@
+     color: #c7b299
+ 
+ .main_text
+-  margin: 0 auto
++  margin: 100px auto 0
+ 
+   .main_title__text
+     font-family: $font-family-serif
+@@ -52,6 +50,9 @@
+     color:  $white-color
+     font-size: 16px
+     font-weight: 300
++
++
++
+     line-height: 24px
+     text-align: center
+   .get_started
