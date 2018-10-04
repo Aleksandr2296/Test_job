@@ -8,16 +8,14 @@ h1 {
   font-family: "Raleway", sans-serif;
   color: #ffffff;
   font-size: 52px;
-  font-weight: 700; }
+  font-weight: 700;
+  text-align: center; }
 
 h3 {
   font-family: "Raleway", sans-serif;
   color: #555555;
   font-size: 30px;
   font-weight: 600; }
-
-.slide {
-  position: absolute; }
 
 .header {
   position: relative; }
@@ -34,11 +32,44 @@ h3 {
 .menu__item, .icon_sets__search {
   list-style-type: none;
   margin: 0 14px; }
-  .menu__item a, .icon_sets__search a {
+  .menu__item .item__button, .icon_sets__search .item__button {
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
     color: #ffffff;
     font-size: 14px;
     font-weight: 300; }
-    .menu__item a a:hover, .icon_sets__search a a:hover {
-      color: #c7b299; }
+  .menu__item .item__button:hover, .icon_sets__search .item__button:hover {
+    color: #c7b299; }
+
+.main_text {
+  margin: 0 auto; }
+  .main_text .main_title__text {
+    font-family: "Raleway", sans-serif;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center; }
+  .main_text .main_title__paragraph {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center; }
+  .main_text .get_started {
+    display: block;
+    margin: 40px auto;
+    padding: 15px 25px;
+    width: 170px;
+    font-family: "Raleway", sans-serif;
+    color: #ffffff;
+    background: #9a8776;
+    border-radius: 9px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: center; }
+  .main_text .get_started:hover {
+    background: #252525; }
