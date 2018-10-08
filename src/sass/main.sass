@@ -2,19 +2,23 @@
 @import "mixin"
 body
   background-color: $white-color
+
 .flex
   display: flex
   justify-content: center
 //------------------header-----------------
 header
   height: 100vh
+
 .bg-image
   height: 100vh
   min-height: 568px
+
 .carousel
   position: absolute
   width: 100vw
   left: 0
+
 h1
   @include text($font-family-serif, $white-color, 52px, 700)
   text-align: center
@@ -67,19 +71,47 @@ h3
     background: $bg-button-active
 
 //----------------------section-----------------------
-.service_links
-  display: flex
-  flex-direction: column
-  justify-content: center
-  text-align: center
-
 
 figure
   padding-top: 80px
+
 h5
-  @include text($font-family-serif,$color-headlines,22px,600)
+  @include text($font-family-serif, $color-headlines, 22px, 600)
   margin-top: 25px
+
 h5:hover
   color: $color-link-active
+
 p
-  @include text($font-family-base, $color-text,14px,300)
+  @include text($font-family-base, $color-text, 14px, 300)
+
+.service_links
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  text-decoration: none
+  text-align: center
+
+.service_links:hover img
+  background-color: #c7b29a
+
+.service_links:hover h5,
+.service_links:hover p
+  color: #deb887
+
+.service_links:hover:after
+  background-color: #deb887
+
+.service_links h5
+  width: 100%
+  margin: 10px 0 0 0
+
+.service_links p
+  width: 100%
+
+.service_links:after
+  content: ""
+  display: block
+  width: 100px
+  height: 2px
+  background-color: black

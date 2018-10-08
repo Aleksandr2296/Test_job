@@ -86,12 +86,6 @@ h3 {
   .main_text .get_started:hover {
     background: #252525; }
 
-.service_links {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center; }
-
 figure {
   padding-top: 80px; }
 
@@ -110,3 +104,34 @@ p {
   color: #8c8c8c;
   font-size: 14px;
   font-weight: 300; }
+
+.service_links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center; }
+
+.service_links:hover img {
+  background-color: #c7b29a; }
+
+.service_links:hover h5,
+.service_links:hover p {
+  color: #deb887; }
+
+.service_links:hover:after {
+  background-color: #deb887; }
+
+.service_links h5 {
+  width: 100%;
+  margin: 10px 0 0 0; }
+
+.service_links p {
+  width: 100%; }
+
+.service_links:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: black; }
