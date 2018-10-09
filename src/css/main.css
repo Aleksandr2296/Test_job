@@ -1,8 +1,21 @@
 body {
-  background-color: #eeeeee; }
+  background-color: #ffffff; }
+
+.flex {
+  display: flex;
+  justify-content: center; }
+
+header {
+  height: 100vh; }
 
 .bg-image {
-  margin-top: -7%; }
+  height: 100vh;
+  min-height: 568px; }
+
+.carousel {
+  position: absolute;
+  width: 100vw;
+  left: 0; }
 
 h1 {
   font-family: "Raleway", sans-serif;
@@ -31,18 +44,18 @@ h3 {
 
 .menu__item, .icon_sets__search {
   list-style-type: none;
-  margin: 0 14px; }
+  margin: 0 12px; }
   .menu__item .item__button, .icon_sets__search .item__button {
-    text-decoration: none;
     font-family: "Montserrat", sans-serif;
     color: #ffffff;
     font-size: 14px;
-    font-weight: 300; }
+    font-weight: 300;
+    text-decoration: none; }
   .menu__item .item__button:hover, .icon_sets__search .item__button:hover {
-    color: #c7b299; }
+    color: #c7b29a; }
 
 .main_text {
-  margin: 0 auto; }
+  margin-top: 100px; }
   .main_text .main_title__text {
     font-family: "Raleway", sans-serif;
     color: #ffffff;
@@ -54,22 +67,71 @@ h3 {
     color: #ffffff;
     font-size: 16px;
     font-weight: 300;
-    line-height: 24px;
     text-align: center; }
   .main_text .get_started {
+    font-family: "Raleway", sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
     display: block;
     margin: 40px auto;
     padding: 15px 25px;
     width: 170px;
-    font-family: "Raleway", sans-serif;
-    color: #ffffff;
     background: #9a8776;
     border-radius: 9px;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 700;
     line-height: 23px;
     text-align: center; }
   .main_text .get_started:hover {
     background: #252525; }
+
+figure {
+  padding-top: 80px; }
+
+h5 {
+  font-family: "Raleway", sans-serif;
+  color: #555555;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 25px; }
+
+h5:hover {
+  color: #c7b29a; }
+
+p {
+  font-family: "Montserrat", sans-serif;
+  color: #8c8c8c;
+  font-size: 14px;
+  font-weight: 300; }
+
+.service_links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center; }
+
+.service_links:hover img {
+  background-color: #c7b29a; }
+
+.service_links:hover h5,
+.service_links:hover p {
+  color: #deb887; }
+
+.service_links:hover:after {
+  background-color: #deb887; }
+
+.service_links h5 {
+  width: 100%;
+  margin: 10px 0 0 0; }
+
+.service_links p {
+  width: 100%; }
+
+.service_links:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: black; }

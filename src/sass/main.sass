@@ -1,71 +1,117 @@
 @import "vars"
+@import "mixin"
 body
-  background-color: #eeeeee
+  background-color: $white-color
+
+.flex
+  display: flex
+  justify-content: center
 //------------------header-----------------
+header
+  height: 100vh
+
 .bg-image
-  margin-top: -7%
+  height: 100vh
+  min-height: 568px
+
+.carousel
+  position: absolute
+  width: 100vw
+  left: 0
+
 h1
-  font-family: $font-family-serif
-  color: $white-color
-  font-size: 52px
-  font-weight: 700
+  @include text($font-family-serif, $white-color, 52px, 700)
   text-align: center
+
 h3
-  font-family: $font-family-serif
-  color:  #555555
-  font-size: 30px
-  font-weight: 600
+  @include text($font-family-serif, $color-headlines, 30px, 600)
+
 .header
   position: relative
+
 .head
   padding: 40px 0
-.menu,.icon_sets
+
+.menu, .icon_sets
   display: flex
   justify-content: flex-end
   padding: 0
   margin: 0
+
 .menu__item, .icon_sets__search
   list-style-type: none
-  margin: 0 14px
+  margin: 0 12px
   .item__button
+    @include text($font-family-base, $white-color, 14px, 300)
     text-decoration: none
-    font-family: $font-family-base
-    color: $white-color
-    font-size: 14px
-    font-weight: 300
   .item__button:hover
-    color: #c7b299
+    color: $color-link-active
 
 .main_text
-  margin: 0 auto
-
+  margin-top: 100px
   .main_title__text
-    font-family: $font-family-serif
-    color: $white-color
-    font-size: 36px
-    font-weight: 500
+    @include text($font-family-serif, $white-color, 36px, 500)
     text-align: center
   .main_title__paragraph
-    font-family: $font-family-base
-    color:  $white-color
-    font-size: 16px
-    font-weight: 300
-    line-height: 24px
+    @include text($font-family-base, $white-color, 16px, 300)
     text-align: center
   .get_started
+    @include text($font-family-serif, $white-color, 14px, 700)
     display: block
     margin: 40px auto
     padding: 15px 25px
     width: 170px
-    font-family: $font-family-serif
-    color:  $white-color
-    background: #9a8776
+    background: $bg-button
     border-radius: 9px
     text-decoration: none
     text-transform: uppercase
-    font-size: 14px
-    font-weight: 700
     line-height: 23px
     text-align: center
   .get_started:hover
-      background: #252525
+    background: $bg-button-active
+
+//----------------------section-----------------------
+
+figure
+  padding-top: 80px
+
+h5
+  @include text($font-family-serif, $color-headlines, 22px, 600)
+  margin-top: 25px
+
+h5:hover
+  color: $color-link-active
+
+p
+  @include text($font-family-base, $color-text, 14px, 300)
+
+.service_links
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  text-decoration: none
+  text-align: center
+
+.service_links:hover img
+  background-color: #c7b29a
+
+.service_links:hover h5,
+.service_links:hover p
+  color: #deb887
+
+.service_links:hover:after
+  background-color: #deb887
+
+.service_links h5
+  width: 100%
+  margin: 10px 0 0 0
+
+.service_links p
+  width: 100%
+
+.service_links:after
+  content: ""
+  display: block
+  width: 100px
+  height: 2px
+  background-color: black
