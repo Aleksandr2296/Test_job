@@ -3,9 +3,9 @@
 body
   background-color: $white-color
 
-.flex
-  display: flex
-  justify-content: center
+//.flex
+//  display: flex
+//  justify-content: center
 //------------------header-----------------
 header
   height: 100vh
@@ -16,7 +16,7 @@ header
 
 .carousel
   position: absolute
-  width: 100vw
+  width: 100%
   left: 0
 
 h1
@@ -45,7 +45,7 @@ h3
     @include text($font-family-base, $white-color, 14px, 300)
     text-decoration: none
   .item__button:hover
-    color: $color-link-active
+    color: $color-active
 
 .main_text
   margin-top: 100px
@@ -69,19 +69,20 @@ h3
     text-align: center
   .get_started:hover
     background: $bg-button-active
-
+  .get_started:active
+    background: #eeeeee
+    color: #191919
 //----------------------section-----------------------
 
 figure
-  padding-top: 80px
+  padding: 89px 0 80px
 
 h5
   @include text($font-family-serif, $color-headlines, 22px, 600)
   margin-top: 25px
 
 h5:hover
-  color: $color-link-active
-
+  color: $color-active
 p
   @include text($font-family-base, $color-text, 14px, 300)
 
@@ -92,20 +93,16 @@ p
   text-decoration: none
   text-align: center
 
-.service_links:hover img
-  background-color: #c7b29a
+.service_links:hover svg
+  fill: $color-active
 
-.service_links:hover h5,
-.service_links:hover p
-  color: #deb887
+.service_links:hover h5
+  color: $color-active
 
 .service_links:hover:after
-  background-color: #deb887
+  background-color: $color-active
 
-.service_links h5
-  width: 100%
-  margin: 10px 0 0 0
-
+.service_links h5,
 .service_links p
   width: 100%
 
@@ -113,5 +110,11 @@ p
   content: ""
   display: block
   width: 100px
-  height: 2px
-  background-color: black
+  height: 3px
+  background-color: #f1eee9
+  transform: scalex(0.3)
+  transition: all 0.3s
+.service_links:hover
+    text-decoration: none
+    &:after
+      transform: scale(1)

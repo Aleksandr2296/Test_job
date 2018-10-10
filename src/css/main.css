@@ -1,10 +1,6 @@
 body {
   background-color: #ffffff; }
 
-.flex {
-  display: flex;
-  justify-content: center; }
-
 header {
   height: 100vh; }
 
@@ -14,7 +10,7 @@ header {
 
 .carousel {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   left: 0; }
 
 h1 {
@@ -85,9 +81,12 @@ h3 {
     text-align: center; }
   .main_text .get_started:hover {
     background: #252525; }
+  .main_text .get_started:active {
+    background: #eeeeee;
+    color: #191919; }
 
 figure {
-  padding-top: 80px; }
+  padding: 89px 0 80px; }
 
 h5 {
   font-family: "Raleway", sans-serif;
@@ -112,20 +111,16 @@ p {
   text-decoration: none;
   text-align: center; }
 
-.service_links:hover img {
-  background-color: #c7b29a; }
+.service_links:hover svg {
+  fill: #c7b29a; }
 
-.service_links:hover h5,
-.service_links:hover p {
-  color: #deb887; }
+.service_links:hover h5 {
+  color: #c7b29a; }
 
 .service_links:hover:after {
-  background-color: #deb887; }
+  background-color: #c7b29a; }
 
-.service_links h5 {
-  width: 100%;
-  margin: 10px 0 0 0; }
-
+.service_links h5,
 .service_links p {
   width: 100%; }
 
@@ -133,5 +128,12 @@ p {
   content: "";
   display: block;
   width: 100px;
-  height: 2px;
-  background-color: black; }
+  height: 3px;
+  background-color: #f1eee9;
+  transform: scalex(0.3);
+  transition: all 0.3s; }
+
+.service_links:hover {
+  text-decoration: none; }
+  .service_links:hover:after {
+    transform: scale(1); }
