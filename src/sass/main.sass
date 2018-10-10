@@ -25,7 +25,8 @@ h1
 
 h3
   @include text($font-family-serif, $color-headlines, 30px, 600)
-
+  text-align: center
+  margin: 83px 0 24px
 .header
   position: relative
 
@@ -55,23 +56,26 @@ h3
   .main_title__paragraph
     @include text($font-family-base, $white-color, 16px, 300)
     text-align: center
-  .get_started
-    @include text($font-family-serif, $white-color, 14px, 700)
-    display: block
-    margin: 40px auto
-    padding: 15px 25px
-    width: 170px
-    background: $bg-button
-    border-radius: 9px
-    text-decoration: none
-    text-transform: uppercase
-    line-height: 23px
-    text-align: center
-  .get_started:hover
-    background: $bg-button-active
-  .get_started:active
-    background: #eeeeee
-    color: #191919
+.button_get
+  margin: 40px auto
+.button
+  @include text($font-family-serif, $white-color, 14px, 700)
+  display: block
+  padding: 15px 25px
+  width: 170px
+  background: $bg-button
+  border-radius: 9px
+  text-decoration: none
+  text-transform: uppercase
+  line-height: 23px
+  text-align: center
+.button:hover
+  background: $bg-button-active
+  text-decoration: none
+  color: $white-color
+.button:active
+  background: $white-color
+  color: #191919
 //----------------------section-----------------------
 
 figure
@@ -102,8 +106,7 @@ p
 .service_links:hover:after
   background-color: $color-active
 
-.service_links h5,
-.service_links p
+.service_links h5,.service_links p
   width: 100%
 
 .service_links:after
@@ -113,8 +116,54 @@ p
   height: 3px
   background-color: #f1eee9
   transform: scalex(0.3)
-  transition: all 0.3s
+  transition: 0.3s
 .service_links:hover
     text-decoration: none
     &:after
       transform: scale(1)
+//----------------------section-----------------------
+.bg
+  width: 100%
+  background: #fbfaf8
+.section_description
+  @include text($font-family-base,$color-text,16px,300)
+  text-align: center
+.bg_section_realization
+  margin-top: 50px
+  width: 100%
+//---------------------aside------------------------------
+.bg_aside
+  background: linear-gradient(to right, #1c1413, #4c2f22)
+h2
+  @include text($font-family-serif, $white-color, 28px, 400)
+  span
+    color: $color-active
+.button_now
+  margin: 40px 0 40px 60px
+.section_purchase
+  @include text($font-family-base, $color-text, 18px, 300)
+  margin: 0
+.nav_button
+  display: flex
+  justify-content: space-evenly
+  margin: 40px 0
+  button
+    @include text($font-family-base,$color-text,14px,300)
+    background: $white-color
+    border: 1px inset $color-text
+    border-radius: 3px
+    padding: 1px 19px
+    margin: 0 -55px
+    box-sizing: border-box
+    transition: background 0.8s
+  button:hover
+    background: #998675
+    color: $white-color
+  button:focus
+    outline: none
+  button:active
+    background: #6b513c
+    color: #191919
+.project
+  img:hover
+    filter: brightness(34%)
