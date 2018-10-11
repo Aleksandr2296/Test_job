@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fce4b15-59a0-4aa5-9418-4dba45aeb33f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/main.sass" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -62,9 +59,9 @@
           <entry key="gitignore" value="3" />
           <entry key="html" value="2399" />
           <entry key="js" value="31" />
-          <entry key="sass" value="2902" />
+          <entry key="sass" value="2905" />
           <entry key="svg" value="150" />
-          <entry key="txt" value="198" />
+          <entry key="txt" value="223" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -73,9 +70,9 @@
           <entry key="Git file" value="3" />
           <entry key="HTML" value="2399" />
           <entry key="JavaScript" value="31" />
-          <entry key="PLAIN_TEXT" value="198" />
+          <entry key="PLAIN_TEXT" value="223" />
           <entry key="SVG" value="150" />
-          <entry key="Sass" value="2902" />
+          <entry key="Sass" value="2905" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -95,8 +92,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="277">
-                  <caret line="322" column="18" lean-forward="true" selection-start-line="322" selection-start-column="18" selection-end-line="322" selection-end-column="18" />
+                <state relative-caret-position="221">
+                  <caret line="374" column="7" lean-forward="true" selection-start-line="374" selection-start-column="7" selection-end-line="374" selection-end-column="7" />
                   <folding>
                     <element signature="n#head#0;n#html#0;n#!!top" />
                     <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
@@ -117,6 +114,7 @@
                     <element signature="n#a#0;n#div#3;n#div#0;n#figure#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#section#1;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#section#2;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#0;n#div#1;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#button#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" />
@@ -157,8 +155,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/sass/main.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="555">
-                  <caret line="262" column="67" selection-start-line="262" selection-start-column="67" selection-end-line="262" selection-end-column="67" />
+                <state relative-caret-position="164">
+                  <caret line="239" column="11" selection-start-line="239" selection-start-column="11" selection-end-line="239" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -209,8 +207,8 @@
         <option value="$PROJECT_DIR$/src/img/icon2.svg" />
         <option value="$PROJECT_DIR$/src/sass/vars.sass" />
         <option value="$PROJECT_DIR$/src/sass/mixin.sass" />
-        <option value="$PROJECT_DIR$/src/sass/main.sass" />
         <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/sass/main.sass" />
       </list>
     </option>
   </component>
@@ -330,7 +328,7 @@
       <workItem from="1538892902342" duration="32071000" />
       <workItem from="1539099747620" duration="5092000" />
       <workItem from="1539158793437" duration="30007000" />
-      <workItem from="1539245379531" duration="15935000" />
+      <workItem from="1539245379531" duration="16663000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1538603316446</created>
@@ -395,11 +393,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539206617684</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Сверстал блок с продуктом">
+      <created>1539262277120</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1539262277120</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133788000" />
+    <option name="totallyTimeSpent" value="134516000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -494,7 +499,8 @@
     <MESSAGE value="Верстка шапки" />
     <MESSAGE value="завершение второй секции" />
     <MESSAGE value="Сверстал section 2, aside, начал версать блок с продуктом." />
-    <option name="LAST_COMMIT_MESSAGE" value="Сверстал section 2, aside, начал версать блок с продуктом." />
+    <MESSAGE value="Сверстал блок с продуктом" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сверстал блок с продуктом" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html" />
@@ -607,17 +613,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="262" column="67" selection-start-line="262" selection-start-column="67" selection-end-line="262" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="322" column="18" lean-forward="true" selection-start-line="322" selection-start-column="18" selection-end-line="322" selection-end-column="18" />
+        <state relative-caret-position="221">
+          <caret line="374" column="7" lean-forward="true" selection-start-line="374" selection-start-column="7" selection-end-line="374" selection-end-column="7" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" />
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
@@ -638,6 +637,7 @@
             <element signature="n#a#0;n#div#3;n#div#0;n#figure#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#aside#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#1;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#button#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" />
@@ -658,6 +658,13 @@
             <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#2;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="239" column="11" selection-start-line="239" selection-start-column="11" selection-end-line="239" selection-end-column="11" />
         </state>
       </provider>
     </entry>
