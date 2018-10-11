@@ -83,7 +83,8 @@ h3 {
   text-decoration: none;
   text-transform: uppercase;
   line-height: 23px;
-  text-align: center; }
+  text-align: center;
+  transition: background 0.3s; }
 
 .button:hover {
   background: #252525;
@@ -207,5 +208,90 @@ h2 {
     background: #6b513c;
     color: #191919; }
 
-.project img:hover {
-  filter: brightness(34%); }
+.project {
+  width: 350px;
+  background: #fbfaf8;
+  transition: background 1s;
+  position: relative;
+  margin-top: 30px; }
+  .project .project img {
+    filter: brightness(34%);
+    transition: filter 1s; }
+  .project a {
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+
+.wrapper {
+  padding: 25px 25px 15px; }
+  .wrapper h6 {
+    font-family: "Raleway", sans-serif;
+    color: #c7b29a;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0; }
+  .wrapper p {
+    font-family: "Montserrat", sans-serif;
+    color: #d1d1d1;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0; }
+
+.project:after {
+  position: absolute;
+  content: "";
+  border: 12px solid transparent;
+  border-bottom: 10px solid #fbfaf8;
+  transition: border-bottom 1s;
+  top: 203px;
+  left: 38px; }
+
+.project:hover:after {
+  border: 12px solid transparent;
+  border-bottom: 10px solid #332b29; }
+
+.project:hover img {
+  filter: brightness(30%);
+  transition: filter 1s; }
+
+.project_icon:hover {
+  visibility: visible; }
+
+.project:hover {
+  background: #332b29; }
+
+.project:hover .project_icon_link,
+.project:hover .project_icon_search {
+  visibility: visible; }
+
+.project_icon_search {
+  display: block;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  visibility: hidden;
+  position: absolute;
+  top: 106px;
+  left: 179px; }
+  .project_icon_search:hover {
+    color: #c7b29a; }
+  .project_icon_search:active {
+    color: #6b513c; }
+  .project_icon_search:focus {
+    outline: none; }
+
+.project_icon_link {
+  display: block;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  visibility: hidden;
+  position: absolute;
+  top: 106px;
+  left: 123px; }
+  .project_icon_link:hover {
+    color: #c7b29a; }
+  .project_icon_link:active {
+    color: #6b513c; }
+  .project_icon_link:focus {
+    outline: none; }
