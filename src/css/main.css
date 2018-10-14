@@ -2,7 +2,8 @@ body {
   background-color: #ffffff; }
 
 header {
-  height: 100vh; }
+  height: 100vh;
+  min-height: 568px; }
 
 .bg-image {
   height: 100vh;
@@ -298,7 +299,9 @@ h2 {
 
 .position {
   position: static;
-  margin-top: 40px; }
+  margin-top: 40px;
+  min-height: 550px;
+  max-height: 550px; }
 
 .wrapper_video {
   position: absolute;
@@ -343,3 +346,26 @@ video {
       fill: #6b513c; }
   .btn_play:focus {
     outline: none; }
+
+.img_iphone {
+  margin-top: 80px; }
+
+.wrapper_mobil {
+  margin-top: 80px; }
+  .wrapper_mobil h3 {
+    text-align: left;
+    padding-top: 80px; }
+  .wrapper_mobil p {
+    font-family: "Montserrat", sans-serif;
+    color: #8c8c8c;
+    font-size: 16px;
+    font-weight: 300; }
+  .wrapper_mobil ul {
+    list-style-image: url("../img/03.svg");
+    margin: 40px 0 0 11px; }
+    .wrapper_mobil ul li {
+      font-family: "Montserrat", sans-serif;
+      color: #8c8c8c;
+      font-size: 16px;
+      font-weight: 300;
+      padding-left: 29px; }

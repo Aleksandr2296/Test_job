@@ -9,7 +9,7 @@ body
 //------------------header-----------------
 header
   height: 100vh
-
+  min-height: 568px
 .bg-image
   height: 100vh
   min-height: 568px
@@ -264,6 +264,8 @@ h2
 .position
   position: static
   margin-top: 40px
+  min-height: 550px
+  max-height: 550px
 
 .wrapper_video
   position: absolute
@@ -302,3 +304,19 @@ video
       fill: #6b513c
   &:focus
     outline: none
+//------------------------------section------------------------
+.img_iphone
+  margin-top: 80px
+.wrapper_mobil
+  margin-top: 80px
+  h3
+    text-align: left
+    padding-top: 80px
+  p
+    @include text($font-family-base,$color-text,16px,300)
+  ul
+    list-style-image: url("../img/03.svg")
+    margin: 40px 0 0 11px
+    li
+      @include text($font-family-base,$color-text,16px,300)
+      padding-left: 29px
