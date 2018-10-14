@@ -174,7 +174,7 @@ h2 {
     color: #c7b29a; }
 
 .button_now {
-  margin: 40px 0 40px 60px; }
+  margin: 40px; }
 
 .section_purchase {
   font-family: "Montserrat", sans-serif;
@@ -294,4 +294,52 @@ h2 {
   .project_icon_link:active {
     color: #6b513c; }
   .project_icon_link:focus {
+    outline: none; }
+
+.position {
+  position: static;
+  margin-top: 40px; }
+
+.wrapper_video {
+  position: absolute;
+  width: 100vw;
+  right: 0; }
+
+video {
+  max-height: 550px;
+  object-fit: fill;
+  width: 100%; }
+
+.video_presentation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 100px; }
+  .video_presentation span {
+    font-family: "Raleway", sans-serif;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0; }
+  .video_presentation p {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 29px; }
+
+.btn_play {
+  border-radius: 50%;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  margin: 44px 0;
+  width: 100px;
+  height: 100px; }
+  .btn_play svg:hover {
+    fill: #c7b29a; }
+    .btn_play svg:hover:active {
+      fill: #6b513c; }
+  .btn_play:focus {
     outline: none; }

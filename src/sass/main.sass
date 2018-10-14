@@ -151,7 +151,7 @@ h2
     color: $color-active
 
 .button_now
-  margin: 40px 0 40px 60px
+  margin: 40px
 
 .section_purchase
   @include text($font-family-base, $color-text, 18px, 300)
@@ -261,3 +261,44 @@ h2
   &:focus
     outline: none
 //-----------------------------------section-----------------------
+.position
+  position: static
+  margin-top: 40px
+
+.wrapper_video
+  position: absolute
+  width: 100vw
+  right: 0
+
+video
+  max-height: 550px
+  object-fit: fill
+  width: 100%
+
+.video_presentation
+  display: flex
+  flex-direction: column
+  text-align: center
+  align-items: center
+  margin-top: 100px
+  span
+    @include text($font-family-serif,$white-color,30px,500)
+    margin: 0
+  p
+    @include text ($font-family-base,$white-color,16px,300)
+    padding-top: 29px
+.btn_play
+  border-radius: 50%
+  background: transparent
+  padding: 0
+  border: 0
+  margin: 44px 0
+  width: 100px
+  height: 100px
+
+  svg:hover
+    fill: $color-active
+    &:active
+      fill: #6b513c
+  &:focus
+    outline: none
