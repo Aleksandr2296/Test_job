@@ -3,6 +3,8 @@
 body
   background-color: $white-color
 
+a:hover
+  text-decoration: none
 //.flex
 //  display: flex
 //  justify-content: center
@@ -10,6 +12,7 @@ body
 header
   height: 100vh
   min-height: 568px
+
 .bg-image
   height: 100vh
   min-height: 568px
@@ -185,9 +188,12 @@ h2
   transition: background 1s
   position: relative
   margin-top: 30px
-  .project img
-    filter: brightness(34%)
+  img
     transition: filter 1s
+
+.project:hover img
+  filter: brightness(30%)
+  transition: filter 1s
   a
     width: 100%
     height: 100%
@@ -214,13 +220,6 @@ h2
 .project:hover:after
   border: 12px solid transparent
   border-bottom: 10px solid #332b29
-
-.project:hover img
-  filter: brightness(30%)
-  transition: filter 1s
-
-.project_icon:hover
-  visibility: visible
 
 .project:hover
   background: #332b29
@@ -284,11 +283,12 @@ video
   align-items: center
   margin-top: 100px
   span
-    @include text($font-family-serif,$white-color,30px,500)
+    @include text($font-family-serif, $white-color, 30px, 500)
     margin: 0
   p
-    @include text ($font-family-base,$white-color,16px,300)
+    @include text($font-family-base, $white-color, 16px, 300)
     padding-top: 29px
+
 .btn_play
   border-radius: 50%
   background: transparent
@@ -307,16 +307,109 @@ video
 //------------------------------section------------------------
 .img_iphone
   margin-top: 80px
+
 .wrapper_mobil
   margin-top: 80px
   h3
     text-align: left
     padding-top: 80px
   p
-    @include text($font-family-base,$color-text,16px,300)
+    @include text($font-family-base, $color-text, 16px, 300)
   ul
     list-style-image: url("../img/03.svg")
     margin: 40px 0 0 11px
     li
-      @include text($font-family-base,$color-text,16px,300)
+      @include text($font-family-base, $color-text, 16px, 300)
       padding-left: 29px
+//------------------------------section------------------------
+.number_reached
+  text-align: center
+  margin-top: 60px
+  .number
+    @include text($font-family-base, $white-color, 39px, 300)
+    height: 50px
+  span
+    @include text($font-family-base, $color-active, 14px, 300)
+    text-transform: uppercase
+  &:after
+    content: ""
+    width: 30px
+    height: 1px
+    display: block
+    background: #f1eee9
+    margin: 20px auto 51px
+//------------------------------section------------------------
+.posts
+  background: #fbfaf8
+  margin-top: 40px
+  transition: background 1s ease-out
+  position: relative
+  &:hover
+    background: #332b29
+  img
+    transition: filter 1s
+
+.calendar
+  position: absolute
+  width: 50px
+  top: 20px
+  left: 20px
+  .block_number
+    background: #363636
+    @include text($font-family-base, $white-color, 24px, 300)
+    text-align: center
+    border-radius: 5px 5px 0 0
+    transition: background 1s ease-out
+  .block_month
+    background: #252525
+    @include text($font-family-base, $white-color, 12px, 300)
+    text-align: center
+    border-radius: 0 0 5px 5px
+    transition: background 1s ease-out
+
+.wrapper_description
+  width: 100%
+  height: 100%
+  padding: 25px
+  span
+    @include text($font-family-serif, $color-headlines, 20px, 500)
+    display: block
+    margin-bottom: 10px
+  p
+    @include text($font-family-base, $color-text, 14px, 300)
+  a
+    @include text($font-family-base, $color-active, 14px, 300)
+
+.posts:hover img
+  filter: brightness(30%)
+  transition: filter 1s
+
+.posts:hover .block_number
+  background: $color-active
+
+.posts:hover .block_month
+  background: #a48d72
+
+.posts:hover span
+  color: $color-active
+
+.posts:hover p
+  color: $white-color
+
+.posts_link
+  position: absolute
+  width: 100%
+  height: 100%
+
+.wrapper_btn
+  display: flex
+
+.btn_left,
+.btn_right
+  background: transparent
+  border: none
+  margin: 40px 0 80px
+  &:hover svg
+    fill: $color-active
+  &:focus
+    outline: none
