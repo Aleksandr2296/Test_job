@@ -24,7 +24,7 @@ h1 {
   font-weight: 700;
   text-align: center; }
 
-h3 {
+h2 {
   font-family: "Raleway", sans-serif;
   color: #555555;
   font-size: 30px;
@@ -169,12 +169,12 @@ p {
 .bg_aside {
   background: linear-gradient(to right, #1c1413, #4c2f22); }
 
-h2 {
+.wrapper_head {
   font-family: "Raleway", sans-serif;
   color: #ffffff;
   font-size: 28px;
   font-weight: 400; }
-  h2 span {
+  .wrapper_head span {
     color: #c7b29a; }
 
 .button_now {
@@ -351,7 +351,7 @@ video {
 
 .wrapper_mobil {
   margin-top: 80px; }
-  .wrapper_mobil h3 {
+  .wrapper_mobil h2 {
     text-align: left;
     padding-top: 80px; }
   .wrapper_mobil p {
@@ -396,7 +396,8 @@ video {
   background: #fbfaf8;
   margin-top: 40px;
   transition: background 1s ease-out;
-  position: relative; }
+  position: relative;
+  width: 350px; }
   .posts:hover {
     background: #332b29; }
   .posts img {
@@ -483,3 +484,62 @@ video {
   .btn_left:focus,
   .btn_right:focus {
     outline: none; }
+
+.bg_photo {
+  background: url("../img/bg_photo.jpg") no-repeat center/cover; }
+
+.logo_partners {
+  display: block;
+  margin: 41px auto;
+  padding: 50px 0; }
+
+.content_footer {
+  background: #191919; }
+
+.wrapper_logo {
+  margin: 80px 0; }
+  .wrapper_logo a {
+    font-family: "Montserrat", sans-serif;
+    color: #d1d1d1;
+    font-size: 11px;
+    font-weight: 300;
+    display: block;
+    width: 74px;
+    padding-top: 16px; }
+    .wrapper_logo a img {
+      margin-bottom: 29px; }
+
+.text_footer {
+  font-family: "Montserrat", sans-serif;
+  color: #555555;
+  font-size: 14px;
+  font-weight: 300; }
+
+h3 {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700; }
+
+.footer_link {
+  margin: 33px 0 21px; }
+  .footer_link:hover p {
+    color: #c7b29a; }
+  .footer_link time {
+    font-family: "Montserrat", sans-serif;
+    color: #363636;
+    font-size: 12px;
+    font-weight: 300; }
+
+.footer_link:hover time {
+  color: #ffffff; }
+
+.footer_link:hover p {
+  color: #c7b29a; }
+
+.footer_link:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #595f6f;
+  display: block; }
