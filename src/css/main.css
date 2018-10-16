@@ -4,6 +4,9 @@ body {
 a:hover {
   text-decoration: none; }
 
+.container {
+  max-width: 1170px; }
+
 header {
   height: 100vh;
   min-height: 568px; }
@@ -513,16 +516,20 @@ video {
   font-family: "Montserrat", sans-serif;
   color: #555555;
   font-size: 14px;
-  font-weight: 300; }
+  font-weight: 300;
+  margin: 0; }
 
 h3 {
   font-family: "Raleway", sans-serif;
   color: #ffffff;
   font-size: 24px;
-  font-weight: 700; }
+  font-weight: 700;
+  margin: 108px 0 33px; }
 
 .footer_link {
-  margin: 33px 0 21px; }
+  margin: 19px 0 21px;
+  display: block;
+  width: 100%; }
   .footer_link:hover p {
     color: #c7b29a; }
   .footer_link time {
@@ -542,4 +549,59 @@ h3 {
   width: 100%;
   height: 1px;
   background: #595f6f;
-  display: block; }
+  display: block;
+  margin-top: 19px; }
+
+.footer_link:nth-child(4):after {
+  display: none; }
+
+.allotment_text {
+  color: #00bff3; }
+
+.wrapper_text {
+  color: #191919; }
+
+.wrapper_footer_img {
+  display: flex;
+  flex-wrap: wrap; }
+  .wrapper_footer_img a img {
+    margin: 5.5px;
+    width: 120px;
+    height: 88px;
+    transition: filter 1s; }
+  .wrapper_footer_img img:hover {
+    filter: brightness(30%);
+    transition: filter 1s; }
+
+.copy_footer {
+  background: #111111; }
+
+.copy_link_left, .copy_link_right {
+  font-family: "Raleway", sans-serif;
+  color: #555555;
+  font-size: 13px;
+  font-weight: 300;
+  display: inline-block;
+  margin: 25px 0; }
+  .copy_link_left span, .copy_link_right span {
+    color: #959595; }
+
+.copy_link_left:after,
+.copy_link_right:after {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #595f6f;
+  margin: 0 5px; }
+
+.copy_link_left:nth-child(4):after,
+.copy_link_right:nth-child(2):after {
+  display: none; }
+
+.copy_link_left:hover,
+.copy_link_right:hover {
+  color: #c7b29a; }
+
+.right {
+  text-align: right; }

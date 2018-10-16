@@ -5,6 +5,9 @@ body
 
 a:hover
   text-decoration: none
+
+.container
+  max-width: 1170px
 //.flex
 //  display: flex
 //  justify-content: center
@@ -438,12 +441,16 @@ video
 
 .text_footer
   @include text($font-family-base, #555555, 14px, 300)
+  margin: 0
 
 h3
   @include text($font-family-serif, $white-color, 24px, 700)
+  margin: 108px 0 33px
 
 .footer_link
-  margin: 33px 0 21px
+  margin: 19px 0 21px
+  display: block
+  width: 100%
   &:hover p
     color: $color-active
   time
@@ -461,3 +468,55 @@ h3
   height: 1px
   background: #595f6f
   display: block
+  margin-top: 19px
+
+.footer_link:nth-child(4):after
+  display: none
+
+.allotment_text
+  color: #00bff3
+
+.wrapper_text
+  color: $bg-footer
+
+.wrapper_footer_img
+  display: flex
+  flex-wrap: wrap
+  a img
+    margin: 5.5px
+    width: 120px
+    height: 88px
+    transition: filter 1s
+  img:hover
+    filter: brightness(30%)
+    transition: filter 1s
+//-------------------------------footer---------------------------
+.copy_footer
+  background: $bg-footer-copyright
+
+.copy_link_left,.copy_link_right
+  @include text($font-family-serif, $color-headlines, 13px, 300)
+  display: inline-block
+  margin: 25px 0
+  span
+    color: #959595
+
+.copy_link_left:after,
+.copy_link_right:after
+  display: inline-block
+  content: ""
+  width: 1px
+  height: 15px
+  background: #595f6f
+  margin: 0 5px
+
+.copy_link_left:nth-child(4):after,
+.copy_link_right:nth-child(2):after
+  display: none
+
+.copy_link_left:hover,
+.copy_link_right:hover
+  color: $color-active
+
+.right
+  text-align: right
