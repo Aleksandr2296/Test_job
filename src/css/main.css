@@ -216,21 +216,21 @@ p {
     color: #191919; }
 
 .project {
-  width: 350px;
+  width: 360px;
   background: #fbfaf8;
   transition: background 1s;
   position: relative;
   margin-top: 30px; }
+  .project a {
+    width: 100%;
+    height: 100%;
+    position: absolute; }
   .project img {
     transition: filter 1s; }
 
 .project:hover img {
   filter: brightness(30%);
   transition: filter 1s; }
-  .project:hover img a {
-    width: 100%;
-    height: 100%;
-    position: absolute; }
 
 .wrapper {
   padding: 25px 25px 15px; }
@@ -253,8 +253,8 @@ p {
   border: 12px solid transparent;
   border-bottom: 10px solid #fbfaf8;
   transition: border-bottom 1s;
-  top: 203px;
-  left: 38px; }
+  top: 209px;
+  left: 25px; }
 
 .project:hover:after {
   border: 12px solid transparent;
@@ -335,6 +335,7 @@ video {
     padding-top: 29px; }
 
 .btn_play {
+  cursor: pointer;
   border-radius: 50%;
   background: transparent;
   padding: 0;
