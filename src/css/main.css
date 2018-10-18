@@ -1,4 +1,65 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300|Raleway:400,500,600,700");
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello.eot?88316605");
+  src: url("../fonts/fontello.eot?88316605#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?88316605") format("woff2"), url("../fonts/fontello.woff?88316605") format("woff"), url("../fonts/fontello.ttf?88316605") format("truetype"), url("../fonts/fontello.svg?88316605#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?88316605#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-mail:before {
+  content: '\e800'; }
+
+/* '' */
+.icon-search-1:before {
+  content: '\e801'; }
+
+/* '' */
+.icon-link:before {
+  content: '\e802'; }
+
+/* '' */
+.icon-menu:before {
+  content: '\f0c9'; }
+
+/* '' */
 body {
   background-color: #ffffff; }
 
@@ -36,29 +97,35 @@ h2 {
   text-align: center;
   margin: 83px 0 24px; }
 
-.header {
-  position: relative; }
-
-.head {
+.padding {
   padding: 40px 0; }
+
+.menu_btn {
+  display: none;
+  width: 55px;
+  height: 55px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 32px;
+  cursor: pointer; }
 
 .menu, .icon_sets {
   display: flex;
   justify-content: flex-end;
   padding: 0;
   margin: 0; }
-
-.menu__item, .icon_sets__search {
-  list-style-type: none;
-  margin: 0 12px; }
-  .menu__item .item__button, .icon_sets__search .item__button {
-    font-family: "Montserrat", sans-serif;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 300;
-    text-decoration: none; }
-  .menu__item .item__button:hover, .icon_sets__search .item__button:hover {
-    color: #c7b29a; }
+  .menu li, .icon_sets li {
+    list-style-type: none;
+    margin: 0 12px; }
+    .menu li .menu_link, .icon_sets li .menu_link {
+      font-family: "Montserrat", sans-serif;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 300;
+      text-decoration: none; }
+    .menu li .menu_link:hover, .icon_sets li .menu_link:hover {
+      color: #c7b29a; }
 
 .main_text {
   margin-top: 100px; }
@@ -405,7 +472,8 @@ video {
   background: #fbfaf8;
   margin-top: 40px;
   transition: background 1s ease-out;
-  position: relative; }
+  position: relative;
+  width: 360px; }
   .posts:hover {
     background: #332b29; }
   .posts img {
@@ -506,9 +574,9 @@ video {
 .content_footer {
   background: #191919; }
 
-.wrapper_logo {
+.footer_logo {
   margin: 80px 0; }
-  .wrapper_logo a {
+  .footer_logo a {
     font-family: "Montserrat", sans-serif;
     color: #d1d1d1;
     font-size: 11px;
@@ -516,7 +584,7 @@ video {
     display: block;
     width: 74px;
     padding-top: 16px; }
-    .wrapper_logo a img {
+    .footer_logo a img {
       margin-bottom: 29px; }
 
 .text_footer {
@@ -572,7 +640,7 @@ h3 {
   display: flex;
   flex-wrap: wrap; }
   .wrapper_footer_img a img {
-    margin: 5.5px;
+    margin: 5px;
     width: 120px;
     height: 88px;
     transition: filter 1s; }
@@ -612,3 +680,11 @@ h3 {
 
 .right {
   text-align: right; }
+
+@media (max-width: 480px) {
+  .logo {
+    width: 150px; }
+  .menu_btn {
+    display: block; }
+  .menu, .icon_sets {
+    display: none; } }

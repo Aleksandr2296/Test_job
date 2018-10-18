@@ -1,6 +1,7 @@
 @import "vars"
 @import "mixin"
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300|Raleway:400,500,600,700')
+@import "fontello"
 body
   background-color: $white-color
 
@@ -9,9 +10,7 @@ a:hover
 
 .container
   max-width: 1170px
-//.flex
-//  display: flex
-//  justify-content: center
+
 //------------------header-----------------
 header
   height: 100vh
@@ -35,26 +34,32 @@ h2
   text-align: center
   margin: 83px 0 24px
 
-.header
-  position: relative
-
-.head
+.padding
   padding: 40px 0
+
+.menu_btn
+  display: none
+  width: 55px
+  height: 55px
+  background: transparent
+  border: none
+  color: $white-color
+  font-size: 32px
+  cursor: pointer
 
 .menu, .icon_sets
   display: flex
   justify-content: flex-end
   padding: 0
   margin: 0
-
-.menu__item, .icon_sets__search
-  list-style-type: none
-  margin: 0 12px
-  .item__button
-    @include text($font-family-base, $white-color, 14px, 300)
-    text-decoration: none
-  .item__button:hover
-    color: $color-active
+  li
+    list-style-type: none
+    margin: 0 12px
+    .menu_link
+      @include text($font-family-base, $white-color, 14px, 300)
+      text-decoration: none
+    .menu_link:hover
+      color: $color-active
 
 .main_text
   margin-top: 100px
@@ -354,6 +359,7 @@ video
   margin-top: 40px
   transition: background 1s ease-out
   position: relative
+  width: 360px
   &:hover
     background: #332b29
   img
@@ -437,7 +443,7 @@ video
 .content_footer
   background: #191919
 
-.wrapper_logo
+.footer_logo
   margin: 80px 0
   a
     @include text($font-family-base, #d1d1d1, 11px, 300)
@@ -491,7 +497,7 @@ h3
   display: flex
   flex-wrap: wrap
   a img
-    margin: 5.5px
+    margin: 5px
     width: 120px
     height: 88px
     transition: filter 1s
@@ -528,3 +534,5 @@ h3
 
 .right
   text-align: right
+
+@import "media"
