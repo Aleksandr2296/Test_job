@@ -1,5 +1,6 @@
 @import "vars"
 @import "mixin"
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300|Raleway:400,500,600,700')
 body
   background-color: $white-color
 
@@ -169,6 +170,7 @@ p
   margin: 40px 0
   button
     @include text($font-family-base, $color-text, 14px, 300)
+    cursor: pointer
     background: $white-color
     border: 1px inset $color-text
     border-radius: 3px
@@ -184,7 +186,7 @@ p
   button:active
     background: #6b513c
     color: #191919
-//--------------------------------section-----------------------------
+
 .project
   width: 360px
   background: #fbfaf8
@@ -196,6 +198,7 @@ p
     height: 100%
     position: absolute
   img
+    width: 360px
     transition: filter 1s
 
 .project:hover img
@@ -227,11 +230,8 @@ p
 .project:hover
   background: #332b29
 
-.project:hover .project_icon_link,
-.project:hover .project_icon_search
-  visibility: visible
-
 .project_icon_search
+  cursor: pointer
   display: block
   color: $white-color
   background: transparent
@@ -248,6 +248,7 @@ p
     outline: none
 
 .project_icon_link
+  cursor: pointer
   display: block
   color: $white-color
   background: transparent
@@ -262,6 +263,11 @@ p
     color: #6b513c
   &:focus
     outline: none
+
+.project:hover .project_icon_link,
+.project:hover .project_icon_search
+  visibility: visible
+
 //-----------------------------------section-----------------------
 .position
   position: static
@@ -348,10 +354,10 @@ video
   margin-top: 40px
   transition: background 1s ease-out
   position: relative
-  width: 350px
   &:hover
     background: #332b29
   img
+    width: 360px
     transition: filter 1s
 
 .calendar
@@ -411,6 +417,7 @@ video
 
 .btn_left,
 .btn_right
+  cursor: pointer
   background: transparent
   border: none
   margin: 40px 0 80px

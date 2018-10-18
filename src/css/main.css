@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300|Raleway:400,500,600,700");
 body {
   background-color: #ffffff; }
 
@@ -199,6 +200,7 @@ p {
     color: #8c8c8c;
     font-size: 14px;
     font-weight: 300;
+    cursor: pointer;
     background: #ffffff;
     border: 1px inset #8c8c8c;
     border-radius: 3px;
@@ -226,6 +228,7 @@ p {
     height: 100%;
     position: absolute; }
   .project img {
+    width: 360px;
     transition: filter 1s; }
 
 .project:hover img {
@@ -263,11 +266,8 @@ p {
 .project:hover {
   background: #332b29; }
 
-.project:hover .project_icon_link,
-.project:hover .project_icon_search {
-  visibility: visible; }
-
 .project_icon_search {
+  cursor: pointer;
   display: block;
   color: #ffffff;
   background: transparent;
@@ -284,6 +284,7 @@ p {
     outline: none; }
 
 .project_icon_link {
+  cursor: pointer;
   display: block;
   color: #ffffff;
   background: transparent;
@@ -298,6 +299,10 @@ p {
     color: #6b513c; }
   .project_icon_link:focus {
     outline: none; }
+
+.project:hover .project_icon_link,
+.project:hover .project_icon_search {
+  visibility: visible; }
 
 .position {
   position: static;
@@ -400,11 +405,11 @@ video {
   background: #fbfaf8;
   margin-top: 40px;
   transition: background 1s ease-out;
-  position: relative;
-  width: 350px; }
+  position: relative; }
   .posts:hover {
     background: #332b29; }
   .posts img {
+    width: 360px;
     transition: filter 1s; }
 
 .calendar {
@@ -479,6 +484,7 @@ video {
 
 .btn_left,
 .btn_right {
+  cursor: pointer;
   background: transparent;
   border: none;
   margin: 40px 0 80px; }
