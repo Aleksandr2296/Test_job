@@ -1,14 +1,21 @@
 @import "vars"
 @import "mixin"
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300|Raleway:400,500,600,700')
 body
   background-color: $white-color
 
-.flex
-  display: flex
-  justify-content: center
+a:hover
+  text-decoration: none
+
+.container
+  max-width: 1170px
+//.flex
+//  display: flex
+//  justify-content: center
 //------------------header-----------------
 header
   height: 100vh
+  min-height: 568px
 
 .bg-image
   height: 100vh
@@ -16,15 +23,17 @@ header
 
 .carousel
   position: absolute
-  width: 100vw
+  width: 100%
   left: 0
 
 h1
   @include text($font-family-serif, $white-color, 52px, 700)
   text-align: center
 
-h3
+h2
   @include text($font-family-serif, $color-headlines, 30px, 600)
+  text-align: center
+  margin: 83px 0 24px
 
 .header
   position: relative
@@ -45,7 +54,7 @@ h3
     @include text($font-family-base, $white-color, 14px, 300)
     text-decoration: none
   .item__button:hover
-    color: $color-link-active
+    color: $color-active
 
 .main_text
   margin-top: 100px
@@ -55,32 +64,42 @@ h3
   .main_title__paragraph
     @include text($font-family-base, $white-color, 16px, 300)
     text-align: center
-  .get_started
-    @include text($font-family-serif, $white-color, 14px, 700)
-    display: block
-    margin: 40px auto
-    padding: 15px 25px
-    width: 170px
-    background: $bg-button
-    border-radius: 9px
-    text-decoration: none
-    text-transform: uppercase
-    line-height: 23px
-    text-align: center
-  .get_started:hover
-    background: $bg-button-active
 
+.button_get
+  margin: 40px auto
+
+.button
+  @include text($font-family-serif, $white-color, 14px, 700)
+  display: block
+  padding: 15px 25px
+  width: 170px
+  background: $bg-button
+  border-radius: 9px
+  text-decoration: none
+  text-transform: uppercase
+  line-height: 23px
+  text-align: center
+  transition: background 0.3s
+
+.button:hover
+  background: $bg-button-active
+  text-decoration: none
+  color: $white-color
+
+.button:active
+  background: $white-color
+  color: #191919
 //----------------------section-----------------------
 
 figure
-  padding-top: 80px
+  padding: 89px 0 80px
 
 h5
   @include text($font-family-serif, $color-headlines, 22px, 600)
   margin-top: 25px
 
 h5:hover
-  color: $color-link-active
+  color: $color-active
 
 p
   @include text($font-family-base, $color-text, 14px, 300)
@@ -92,26 +111,420 @@ p
   text-decoration: none
   text-align: center
 
-.service_links:hover img
-  background-color: #c7b29a
+.service_links:hover svg
+  fill: $color-active
 
-.service_links:hover h5,
-.service_links:hover p
-  color: #deb887
+.service_links:hover h5
+  color: $color-active
 
 .service_links:hover:after
-  background-color: #deb887
+  background-color: $color-active
 
-.service_links h5
-  width: 100%
-  margin: 10px 0 0 0
-
-.service_links p
+.service_links h5, .service_links p
   width: 100%
 
 .service_links:after
   content: ""
   display: block
   width: 100px
-  height: 2px
-  background-color: black
+  height: 3px
+  background-color: #f1eee9
+  transform: scalex(0.3)
+  transition: 0.3s
+
+.service_links:hover
+  text-decoration: none
+  &:after
+    transform: scale(1)
+//----------------------section-----------------------
+.bg
+  width: 100%
+  background: #fbfaf8
+
+.section_description
+  @include text($font-family-base, $color-text, 16px, 300)
+  text-align: center
+
+.bg_section_realization
+  margin-top: 50px
+  width: 100%
+//---------------------aside------------------------------
+.bg_aside
+  background: linear-gradient(to right, #1c1413, #4c2f22)
+
+.wrapper_head
+  @include text($font-family-serif, $white-color, 28px, 400)
+  span
+    color: $color-active
+
+.button_now
+  margin: 40px
+
+.section_purchase
+  @include text($font-family-base, $color-text, 18px, 300)
+  margin: 0
+
+.nav_button
+  display: flex
+  justify-content: space-evenly
+  margin: 40px 0
+  button
+    @include text($font-family-base, $color-text, 14px, 300)
+    cursor: pointer
+    background: $white-color
+    border: 1px inset $color-text
+    border-radius: 3px
+    padding: 1px 19px
+    margin: 0 -55px
+    box-sizing: border-box
+    transition: background 0.8s
+  button:hover
+    background: #998675
+    color: $white-color
+  button:focus
+    outline: none
+  button:active
+    background: #6b513c
+    color: #191919
+
+.project
+  width: 360px
+  background: #fbfaf8
+  transition: background 1s
+  position: relative
+  margin-top: 30px
+  a
+    width: 100%
+    height: 100%
+    position: absolute
+  img
+    width: 360px
+    transition: filter 1s
+
+.project:hover img
+  filter: brightness(30%)
+  transition: filter 1s
+
+.wrapper
+  padding: 25px 25px 15px
+  h6
+    @include text($font-family-serif, #c7b29a, 20px, 500)
+    margin: 0
+  p
+    @include text($font-family-base, #d1d1d1, 14px, 300)
+    margin: 0
+
+.project:after
+  position: absolute
+  content: ""
+  border: 12px solid transparent
+  border-bottom: 10px solid #fbfaf8
+  transition: border-bottom 1s
+  top: 209px
+  left: 25px
+
+.project:hover:after
+  border: 12px solid transparent
+  border-bottom: 10px solid #332b29
+
+.project:hover
+  background: #332b29
+
+.project_icon_search
+  cursor: pointer
+  display: block
+  color: $white-color
+  background: transparent
+  border: none
+  visibility: hidden
+  position: absolute
+  top: 106px
+  left: 175px
+  &:hover
+    color: $color-active
+  &:active
+    color: #6b513c
+  &:focus
+    outline: none
+
+.project_icon_link
+  cursor: pointer
+  display: block
+  color: $white-color
+  background: transparent
+  border: none
+  visibility: hidden
+  position: absolute
+  top: 106px
+  left: 137px
+  &:hover
+    color: $color-active
+  &:active
+    color: #6b513c
+  &:focus
+    outline: none
+
+.project:hover .project_icon_link,
+.project:hover .project_icon_search
+  visibility: visible
+
+//-----------------------------------section-----------------------
+.position
+  position: static
+  margin-top: 40px
+  min-height: 550px
+  max-height: 550px
+
+.wrapper_video
+  position: absolute
+  width: 100vw
+  right: 0
+
+video
+  max-height: 550px
+  object-fit: fill
+  width: 100%
+
+.video_presentation
+  display: flex
+  flex-direction: column
+  text-align: center
+  align-items: center
+  margin-top: 100px
+  span
+    @include text($font-family-serif, $white-color, 30px, 500)
+    margin: 0
+  p
+    @include text($font-family-base, $white-color, 16px, 300)
+    padding-top: 29px
+
+.btn_play
+  cursor: pointer
+  border-radius: 50%
+  background: transparent
+  padding: 0
+  border: 0
+  margin: 44px 0
+  width: 100px
+  height: 100px
+
+  svg:hover
+    fill: $color-active
+    &:active
+      fill: #6b513c
+  &:focus
+    outline: none
+//------------------------------section------------------------
+.img_iphone
+  margin-top: 80px
+
+.wrapper_mobil
+  margin-top: 80px
+  h2
+    text-align: left
+    padding-top: 80px
+  p
+    @include text($font-family-base, $color-text, 16px, 300)
+  ul
+    list-style-image: url("../img/03.svg")
+    margin: 40px 0 0 11px
+    li
+      @include text($font-family-base, $color-text, 16px, 300)
+      padding-left: 29px
+//------------------------------section------------------------
+.number_reached
+  text-align: center
+  margin-top: 60px
+  .number
+    @include text($font-family-base, $white-color, 39px, 300)
+    height: 50px
+  span
+    @include text($font-family-base, $color-active, 14px, 300)
+    text-transform: uppercase
+  &:after
+    content: ""
+    width: 30px
+    height: 1px
+    display: block
+    background: #f1eee9
+    margin: 20px auto 51px
+//------------------------------section------------------------
+.posts
+  background: #fbfaf8
+  margin-top: 40px
+  transition: background 1s ease-out
+  position: relative
+  &:hover
+    background: #332b29
+  img
+    width: 360px
+    transition: filter 1s
+
+.calendar
+  position: absolute
+  width: 50px
+  top: 20px
+  left: 20px
+  .block_number
+    background: #363636
+    @include text($font-family-base, $white-color, 24px, 300)
+    text-align: center
+    border-radius: 5px 5px 0 0
+    transition: background 1s ease-out
+  .block_month
+    background: #252525
+    @include text($font-family-base, $white-color, 12px, 300)
+    text-align: center
+    border-radius: 0 0 5px 5px
+    transition: background 1s ease-out
+
+.wrapper_description
+  width: 100%
+  height: 100%
+  padding: 25px
+  span
+    @include text($font-family-serif, $color-headlines, 20px, 500)
+    display: block
+    margin-bottom: 10px
+  p
+    @include text($font-family-base, $color-text, 14px, 300)
+  a
+    @include text($font-family-base, $color-active, 14px, 300)
+
+.posts:hover img
+  filter: brightness(30%)
+  transition: filter 1s
+
+.posts:hover .block_number
+  background: $color-active
+
+.posts:hover .block_month
+  background: #a48d72
+
+.posts:hover span
+  color: $color-active
+
+.posts:hover p
+  color: $white-color
+
+.posts_link
+  position: absolute
+  width: 100%
+  height: 100%
+
+.wrapper_btn
+  display: flex
+
+.btn_left,
+.btn_right
+  cursor: pointer
+  background: transparent
+  border: none
+  margin: 40px 0 80px
+  &:hover svg
+    fill: $color-active
+  &:focus
+    outline: none
+//------------------------------section------------------------
+.bg_photo
+  background: url("../img/bg_photo.jpg") no-repeat center/ cover
+
+.logo_partners
+  display: block
+  margin: 41px auto
+  padding: 50px 0
+//-------------------------------footer---------------------------
+.content_footer
+  background: #191919
+
+.wrapper_logo
+  margin: 80px 0
+  a
+    @include text($font-family-base, #d1d1d1, 11px, 300)
+    display: block
+    width: 74px
+    padding-top: 16px
+    img
+      margin-bottom: 29px
+
+.text_footer
+  @include text($font-family-base, #555555, 14px, 300)
+  margin: 0
+
+h3
+  @include text($font-family-serif, $white-color, 24px, 700)
+  margin: 108px 0 33px
+
+.footer_link
+  margin: 19px 0 21px
+  display: block
+  width: 100%
+  &:hover p
+    color: $color-active
+  time
+    @include text($font-family-base, #363636, 12px, 300)
+
+.footer_link:hover time
+  color: $white-color
+
+.footer_link:hover p
+  color: $color-active
+
+.footer_link:after
+  content: ""
+  width: 100%
+  height: 1px
+  background: #595f6f
+  display: block
+  margin-top: 19px
+
+.footer_link:nth-child(4):after
+  display: none
+
+.allotment_text
+  color: #00bff3
+
+.wrapper_text
+  color: $bg-footer
+
+.wrapper_footer_img
+  display: flex
+  flex-wrap: wrap
+  a img
+    margin: 5.5px
+    width: 120px
+    height: 88px
+    transition: filter 1s
+  img:hover
+    filter: brightness(30%)
+    transition: filter 1s
+//-------------------------------footer---------------------------
+.copy_footer
+  background: $bg-footer-copyright
+
+.copy_link_left, .copy_link_right
+  @include text($font-family-serif, $color-headlines, 13px, 300)
+  display: inline-block
+  margin: 25px 0
+  span
+    color: #959595
+
+.copy_link_left:after,
+.copy_link_right:after
+  display: inline-block
+  content: ""
+  width: 1px
+  height: 15px
+  background: #595f6f
+  margin: 0 5px
+
+.copy_link_left:nth-child(4):after,
+.copy_link_right:nth-child(2):after
+  display: none
+
+.copy_link_left:hover,
+.copy_link_right:hover
+  color: $color-active
+
+.right
+  text-align: right
