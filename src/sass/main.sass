@@ -2,8 +2,11 @@
 @import "mixin"
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300|Raleway:400,500,600,700')
 @import "fontello"
-body
+body, html
+  font-size: 14px
   background-color: $white-color
+  margin: 0
+  padding: 0
 
 a:hover
   text-decoration: none
@@ -26,30 +29,36 @@ header
   left: 0
 
 h1
-  @include text($font-family-serif, $white-color, 52px, 700)
+  @include text($font-family-serif, $white-color, 3.7rem, 700)
   text-align: center
 
 h2
-  @include text($font-family-serif, $color-headlines, 30px, 600)
+  @include text($font-family-serif, $color-headlines, 2.1rem, 600)
   text-align: center
   margin: 83px 0 24px
 
 .padding
   padding: 40px 0
 
-.menu_btn
+.menu_burger
   display: none
-  width: 55px
-  height: 55px
-  background: transparent
-  border: none
-  color: $white-color
-  font-size: 32px
-  cursor: pointer
+  margin-top: -47px
+  .menu_btn
+    padding: 0
+    width: 44px
+    height: 47px
+    background: transparent
+    border: none
+    color: $white-color
+    font-size: 32px
+    cursor: pointer
+    &:focus
+      outline: none
 
-.menu, .icon_sets
+.menu
   display: flex
   justify-content: flex-end
+  position: relative
   padding: 0
   margin: 0
   li
@@ -61,20 +70,43 @@ h2
     .menu_link:hover
       color: $color-active
 
-.main_text
+.search_box
+  position: absolute
+  top: 0
+  right: 0
+
+.search_box:focus-within .search_text
+  width: 300px
+  padding: 0 5px
+
+.search_text
+  border-radius: 11px
+  border: none
+  outline: none
+  line-height: 24px
+  @include text($font-family-base, black, 14px, 300)
+  transition: width 1s ease-out
+  width: 0
+
+.search_btn
+  color: $white-color
+  &:hover
+    color: $color-active
+
+.title_header
   margin-top: 100px
-  .main_title__text
-    @include text($font-family-serif, $white-color, 36px, 500)
+  .main_text
+    @include text($font-family-serif, $white-color, 2.5rem, 500)
     text-align: center
-  .main_title__paragraph
-    @include text($font-family-base, $white-color, 16px, 300)
+  .main_paragraph
+    @include text($font-family-base, $white-color, 1.1rem, 300)
     text-align: center
 
 .button_get
   margin: 40px auto
 
 .button
-  @include text($font-family-serif, $white-color, 14px, 700)
+  @include text($font-family-serif, $white-color, 1rem, 700)
   display: block
   padding: 15px 25px
   width: 170px
@@ -96,18 +128,15 @@ h2
   color: #191919
 //----------------------section-----------------------
 
-figure
-  padding: 89px 0 80px
-
 h5
-  @include text($font-family-serif, $color-headlines, 22px, 600)
+  @include text($font-family-serif, $color-headlines, 1.5rem, 600)
   margin-top: 25px
 
 h5:hover
   color: $color-active
 
 p
-  @include text($font-family-base, $color-text, 14px, 300)
+  @include text($font-family-base, $color-text, 1rem, 300)
 
 .service_links
   display: flex
@@ -115,6 +144,7 @@ p
   justify-content: center
   text-decoration: none
   text-align: center
+  padding: 80px 0 80px
 
 .service_links:hover svg
   fill: $color-active
@@ -147,7 +177,7 @@ p
   background: #fbfaf8
 
 .section_description
-  @include text($font-family-base, $color-text, 16px, 300)
+  @include text($font-family-base, $color-text, 1.1rem, 300)
   text-align: center
 
 .bg_section_realization
@@ -157,30 +187,32 @@ p
 .bg_aside
   background: linear-gradient(to right, #1c1413, #4c2f22)
 
-.wrapper_head
-  @include text($font-family-serif, $white-color, 28px, 400)
-  span
-    color: $color-active
+.rate
+  .wrapper_head
+    @include text($font-family-serif, $white-color, 2rem, 400)
+    span
+      color: $color-active
+  p
+    @include text($font-family-base, $color-text, 1.2rem, 300)
+    margin: 0
 
 .button_now
   margin: 40px
 
-.section_purchase
-  @include text($font-family-base, $color-text, 18px, 300)
-  margin: 0
-
+//-------------------------section-------------------
 .nav_button
   display: flex
-  justify-content: space-evenly
+  justify-content: center
+  flex-wrap: wrap
   margin: 40px 0
   button
-    @include text($font-family-base, $color-text, 14px, 300)
+    @include text($font-family-base, $color-text, 1rem, 300)
     cursor: pointer
     background: $white-color
     border: 1px inset $color-text
     border-radius: 3px
     padding: 1px 19px
-    margin: 0 -55px
+    margin: 5px
     box-sizing: border-box
     transition: background 0.8s
   button:hover
@@ -193,7 +225,7 @@ p
     color: #191919
 
 .project
-  width: 360px
+  width: 100%
   background: #fbfaf8
   transition: background 1s
   position: relative
@@ -203,7 +235,7 @@ p
     height: 100%
     position: absolute
   img
-    width: 360px
+    width: 100%
     transition: filter 1s
 
 .project:hover img
@@ -213,10 +245,10 @@ p
 .wrapper
   padding: 25px 25px 15px
   h6
-    @include text($font-family-serif, #c7b29a, 20px, 500)
+    @include text($font-family-serif, #c7b29a, 1.4rem, 500)
     margin: 0
   p
-    @include text($font-family-base, #d1d1d1, 14px, 300)
+    @include text($font-family-base, #d1d1d1, 1rem, 300)
     margin: 0
 
 .project:after
@@ -225,8 +257,8 @@ p
   border: 12px solid transparent
   border-bottom: 10px solid #fbfaf8
   transition: border-bottom 1s
-  top: 209px
-  left: 25px
+  top: 67%
+  left: 6%
 
 .project:hover:after
   border: 12px solid transparent
@@ -243,8 +275,8 @@ p
   border: none
   visibility: hidden
   position: absolute
-  top: 106px
-  left: 175px
+  top: 38%
+  right: 40%
   &:hover
     color: $color-active
   &:active
@@ -260,8 +292,8 @@ p
   border: none
   visibility: hidden
   position: absolute
-  top: 106px
-  left: 137px
+  top: 38%
+  left: 40%
   &:hover
     color: $color-active
   &:active
@@ -275,15 +307,13 @@ p
 
 //-----------------------------------section-----------------------
 .position
-  position: static
-  margin-top: 40px
-  min-height: 550px
-  max-height: 550px
+  position: absolute
+  top: 0
+  width: 100%
 
 .wrapper_video
-  position: absolute
-  width: 100vw
-  right: 0
+  position: relative
+  width: 100%
 
 video
   max-height: 550px
@@ -297,10 +327,11 @@ video
   align-items: center
   margin-top: 100px
   span
-    @include text($font-family-serif, $white-color, 30px, 500)
+    @include text($font-family-serif, $white-color, 2.1rem, 500)
     margin: 0
   p
-    @include text($font-family-base, $white-color, 16px, 300)
+    @include text($font-family-base, $white-color, 1.1rem, 300)
+    width: 550px
     padding-top: 29px
 
 .btn_play
@@ -329,22 +360,24 @@ video
     text-align: left
     padding-top: 80px
   p
-    @include text($font-family-base, $color-text, 16px, 300)
-  ul
-    list-style-image: url("../img/03.svg")
-    margin: 40px 0 0 11px
-    li
-      @include text($font-family-base, $color-text, 16px, 300)
-      padding-left: 29px
+    @include text($font-family-base, $color-text, 1.1rem, 300)
+
+.list_plus
+  list-style-image: url("../img/03.svg")
+  margin: 40px 0 0 11px
+  li
+    @include text($font-family-base, $color-text, 1.1rem, 300)
+    padding-left: 29px
+
 //------------------------------section------------------------
 .number_reached
   text-align: center
   margin-top: 60px
   .number
-    @include text($font-family-base, $white-color, 39px, 300)
+    @include text($font-family-base, $white-color, 2.7rem, 300)
     height: 50px
   span
-    @include text($font-family-base, $color-active, 14px, 300)
+    @include text($font-family-base, $color-active, 1rem, 300)
     text-transform: uppercase
   &:after
     content: ""
@@ -359,11 +392,11 @@ video
   margin-top: 40px
   transition: background 1s ease-out
   position: relative
-  width: 360px
+  width: 100%
   &:hover
     background: #332b29
   img
-    width: 360px
+    width: 100%
     transition: filter 1s
 
 .calendar
@@ -373,13 +406,13 @@ video
   left: 20px
   .block_number
     background: #363636
-    @include text($font-family-base, $white-color, 24px, 300)
+    @include text($font-family-base, $white-color, 1.7rem, 300)
     text-align: center
     border-radius: 5px 5px 0 0
     transition: background 1s ease-out
   .block_month
     background: #252525
-    @include text($font-family-base, $white-color, 12px, 300)
+    @include text($font-family-base, $white-color, 0.8rem, 300)
     text-align: center
     border-radius: 0 0 5px 5px
     transition: background 1s ease-out
@@ -389,13 +422,13 @@ video
   height: 100%
   padding: 25px
   span
-    @include text($font-family-serif, $color-headlines, 20px, 500)
+    @include text($font-family-serif, $color-headlines, 1.4rem, 500)
     display: block
     margin-bottom: 10px
   p
-    @include text($font-family-base, $color-text, 14px, 300)
+    @include text($font-family-base, $color-text, 1rem, 300)
   a
-    @include text($font-family-base, $color-active, 14px, 300)
+    @include text($font-family-base, $color-active, 1rem, 300)
 
 .posts:hover img
   filter: brightness(30%)
@@ -446,7 +479,7 @@ video
 .footer_logo
   margin: 80px 0
   a
-    @include text($font-family-base, #d1d1d1, 11px, 300)
+    @include text($font-family-base, #d1d1d1, 0.7rem, 300)
     display: block
     width: 74px
     padding-top: 16px
@@ -454,11 +487,11 @@ video
       margin-bottom: 29px
 
 .text_footer
-  @include text($font-family-base, #555555, 14px, 300)
+  @include text($font-family-base, #555555, 1rem, 300)
   margin: 0
 
 h3
-  @include text($font-family-serif, $white-color, 24px, 700)
+  @include text($font-family-serif, $white-color, 1.7rem, 700)
   margin: 108px 0 33px
 
 .footer_link
@@ -468,7 +501,7 @@ h3
   &:hover p
     color: $color-active
   time
-    @include text($font-family-base, #363636, 12px, 300)
+    @include text($font-family-base, #363636, 0.8rem, 300)
 
 .footer_link:hover time
   color: $white-color
@@ -509,7 +542,7 @@ h3
   background: $bg-footer-copyright
 
 .copy_link_left, .copy_link_right
-  @include text($font-family-serif, $color-headlines, 13px, 300)
+  @include text($font-family-serif, $color-headlines, 0.9rem, 300)
   display: inline-block
   margin: 25px 0
   span
@@ -520,7 +553,7 @@ h3
   display: inline-block
   content: ""
   width: 1px
-  height: 15px
+  height: 1.1rem
   background: #595f6f
   margin: 0 5px
 
@@ -532,7 +565,7 @@ h3
 .copy_link_right:hover
   color: $color-active
 
-.right
+.copy_footer_link
   text-align: right
 
 @import "media"
